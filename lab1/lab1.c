@@ -15,7 +15,7 @@ int main() {
     char *saveptr1;
 
     printf("Tokens:\n");
-    // line must be set to NULL or else the it will be stuck on the first token
+    // line must be set to NULL or else it will be stuck on the first token
     while ((token = strtok_r(line, delim, &saveptr1))) {
       printf("\t%s\n", token);
       line = NULL;
