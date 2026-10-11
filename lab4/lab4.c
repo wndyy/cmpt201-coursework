@@ -56,7 +56,7 @@ int main() {
   print_out("first block size: %d\n", (uint64_t *)&first_block->size, sizeof(uint64_t));
   print_out("first block next: %p\n", (void **)&first_block->next, sizeof(void **));
   print_out("second block size: %d\n", (uint64_t *)&second_block->size, sizeof(uint64_t));
-  print_out("second block next: %p\n", (uint64_t *)&second_block->next, sizeof(void **));
+  print_out("second block next: %p\n", (void **)&second_block->next, sizeof(void **));
 
   memset(first_block + sizeof(struct header), 0, 128 - sizeof(struct header));
   memset(second_block + sizeof(struct header), 1, 128 - sizeof(struct header));
