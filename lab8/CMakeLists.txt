@@ -16,8 +16,7 @@ set(CMAKE_BUILD_TYPE Debug)
 # Enable the thread sanitizer 
 # TODO
 
-
-add_compile_options(-pthread)
+add_compile_options(-g -O1 -pthread)
 add_link_options(-pthread)
 
 add_executable(main src/lab8.c)
