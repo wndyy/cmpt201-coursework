@@ -59,7 +59,7 @@ static count_map_t count_words_parallel(word_t *words, size_t num_words) {
   // - Initialize and pass the mutex to protect the critical sections (Task 4)
 
   count_map_t map = NULL;
-  pthread_mutex_t count_mutex = PTHREAD_MUTEX_INITIALIZER;
+  pthread_mutex_t count_mutex;
 
   pthread_t threads[THREAD_COUNT];
   count_thread_args_t *threads_args[THREAD_COUNT];
