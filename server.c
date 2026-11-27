@@ -227,7 +227,7 @@ static void *run_acceptor(void *args) {
         client_args[num_clients].run = true;
         client_args[num_clients].list_handle = aargs->list_handle;
         client_args[num_clients].list_lock = aargs->list_lock;
-        num_clients++;
+        // num_clients++;
 
         // TODO: Create a new thread to handle the client
         pthread_create(&threads[num_clients], NULL, run_client, &client_args[num_clients]);
